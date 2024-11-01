@@ -27,7 +27,7 @@ pip install numpy tqdm wandb tiktoken transformers datasets
 
 原数据集形式：对话形式，用户输入一句话/想要写的故事的风格/包含的词语，模型回答一段连贯的故事文字
 
-原始数据集文件：因为train很多，只给出了TinyStories-Instruct-valid.txt
+原始数据集文件：因为train的文件很大，仓库中只上传了TinyStories-Instruct-valid.txt
 
 ### My_tinystories
 
@@ -178,31 +178,3 @@ No meta.pkl found, assuming GPT-2 encodings...
 Once upon a time, there was a little girl named Lily. She loved to play with her toys, but one day she accidentally dropped her car and it broke. She was very sad and didn't know what to do. Lily's mom saw how sad her was and told her not to worry. She said that they could clean the car and turn it on. Lily was happy and they started to stir the car. It was a normal moment, but they worked together and it started to increase in size. After a few minutes, they had to work and the car was clean again. Lily was so happy and hugged her mom tightly. "Thank you for helping me make the car look great again," she said with a big smile.
 ---------------
 ```
-
-
-
-
-
-## 其他数据集的尝试
-
-除了上面提到的Tinystories数据集，还使用了很多数据集对模型进行训练，如下面所示
-
-### tang poem
-
-### HarryPotter
-
-33343 paragraphs
-
-### Shakespeare
-
-### ROC-Stories
-
-一个简短的故事数据集，每个故事只有五句话，下面的数据集中包含的故事数量。
-
-| total | test | train | val  |
-| ----- | ---- | ----- | ---- |
-| 98161 | 4909 | 88344 | 4908 |
-
-### west-journey
-
-西游记的txt文件数据集，包含一整本书的内容
