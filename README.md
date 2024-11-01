@@ -35,7 +35,7 @@ pip install numpy tqdm wandb tiktoken transformers datasets
 
 **Tinystories_20m**数据集：挑选了原来的valid中的所有数据作为数据集，按9：1的比例划分训练集和验证/测试集，大小约20M
 
-**Path: data/Tinystories/tinystories_20m **（将Tinystories文件夹解压放到data目录下）
+**Path: data/Tinystories/tinystories_20m**（将Tinystories文件夹解压放到data目录下）
 
 **Tinystories_400m**数据集：挑选了原来的数据集中184,026条数据作为数据集，按9：1的比例划分训练集和验证/测试集，大小约480M
 
@@ -150,7 +150,7 @@ iter 40000: loss 1.6491, time 5955.15ms, mfu 8.31%
 
 下图是训练40000个循环时的loss下降曲线
 
-![image-loss](loss_40000.png)
+![image-loss-40000](image_loss_40000.png)
 
 ### Checkpoints
 
