@@ -71,11 +71,11 @@ val has 11,875,168 tokens
 
 基于构建的tinystories-20m和tinystories-400m进行模型的训练
 
-### 模型和训练超参数的设定
+### Settings of model and training hyperparameter
 
 在config/train_tinystories.py中修改
 
-输出路径的含义：out-数据集名称-模型网络大小-循环迭代次数，例如：
+输出路径的含义：out-数据集名称<u>(tinystories-400m)</u>-模型网络大小<u>(baby)</u>-循环迭代次数<u>(40000)</u>，例如：
 
 ```
 out_dir = 'out-tinystories-400m-baby-40000'
@@ -110,13 +110,13 @@ min_lr = 1e4 # 通常设为学习率的1/10
 max_iters = 40000 # 15000/80000
 ```
 
-### 训练模型（从头开始训练）
+### Training
 
 ```
 python train.py config/train_tinystories.py
 ```
 
-### 输出
+### Training_process
 
 ```
 tokens per iteration will be: 8,192
@@ -172,7 +172,7 @@ num_samples = 1
 max_new_tokens = 150
 ```
 
-### 输出
+### Result_output
 
 经过训练后的模型能够自己写出意思明确，表达清晰连贯，逻辑正确的英文小故事。
 
