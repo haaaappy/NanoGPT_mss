@@ -35,7 +35,7 @@ pip install numpy tqdm wandb tiktoken transformers datasets
 
 **Tinystories_20m**数据集：挑选了原来的valid中的所有数据作为数据集，按9：1的比例划分训练集和验证/测试集，大小约20M
 
-**Path: data/Tinystories/tinystories_20m**
+**Path: data/Tinystories/tinystories_20m **（将Tinystories文件夹解压放到data目录下）
 
 **Tinystories_400m**数据集：挑选了原来的数据集中184,026条数据作为数据集，按9：1的比例划分训练集和验证/测试集，大小约480M
 
@@ -75,7 +75,7 @@ val has 11,875,168 tokens
 
 在config/train_tinystories.py中修改
 
-输出路径的含义：out-数据集名称-网络大小-循环迭代次数，例如：
+输出路径的含义：out-数据集名称-模型网络大小-循环迭代次数，例如：
 
 ```
 out_dir = 'out-tinystories-400m-baby-40000'
@@ -146,11 +146,15 @@ iter 40000: loss 1.6491, time 5955.15ms, mfu 8.31%
 
 40K 循环，大概运行了40min
 
-注：训练的详细train_loss和val_loss记录和图标在loss.xlsx文件中
+注：训练的详细train_loss和val_loss记录和图表在loss.xlsx文件中
+
+下图是训练40000个循环时的loss下降曲线
+
+![image-loss](loss_40000.png)
 
 ### Checkpoints
 
-模型的权重保存在./checkpoints文件夹下面；分别有15000/40000/80000三个不同训练循环次数下得到的模型权重
+模型的权重保存在./checkpoints.rar文件夹下面；分别有15000/40000/80000三个不同训练循环次数下得到的模型权重
 
 ## Result
 
@@ -169,6 +173,8 @@ max_new_tokens = 150
 ```
 
 ### 输出
+
+经过训练后的模型能够自己写出意思明确，表达清晰连贯，逻辑正确的英文小故事。
 
 ```
 Overriding: out_dir = out-tinystories-400m-baby-40000
