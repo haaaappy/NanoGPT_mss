@@ -148,6 +148,10 @@ iter 40000: loss 1.6491, time 5955.15ms, mfu 8.31%
 
 注：训练的详细train_loss和val_loss记录和图标在loss.xlsx文件中
 
+### Checkpoints
+
+模型的权重保存在./checkpoints文件夹下面；分别有15000/40000/80000三个不同训练循环次数下得到的模型权重
+
 ## Result
 
 通过sample.py来查看模型
@@ -160,7 +164,7 @@ python sample.py --out_dir=out-tinystories-400m-baby-40000
 
 ```
 start = " " # 以空格为开头输出
-num_samples = 10
+num_samples = 1
 max_new_tokens = 150
 ```
 
@@ -174,6 +178,10 @@ No meta.pkl found, assuming GPT-2 encodings...
 Once upon a time, there was a little girl named Lily. She loved to play with her toys, but one day she accidentally dropped her car and it broke. She was very sad and didn't know what to do. Lily's mom saw how sad her was and told her not to worry. She said that they could clean the car and turn it on. Lily was happy and they started to stir the car. It was a normal moment, but they worked together and it started to increase in size. After a few minutes, they had to work and the car was clean again. Lily was so happy and hugged her mom tightly. "Thank you for helping me make the car look great again," she said with a big smile.
 ---------------
 ```
+
+
+
+
 
 ## 其他数据集的尝试
 
